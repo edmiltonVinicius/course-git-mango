@@ -1,0 +1,34 @@
+- Curso Git Mango -
+link: https://www.youtube.com/playlist?list=PL9aKtVrF05DzbNiE7jcm7s6z6Lg-u72Rq
+
+
+• git remote -v
+    Lista os remotes do repositório
+
+
+• git remote add (apelido-repositório-remote) url-do-repositório
+    Adicionar um novo repositório remote ao repositório local
+
+
+• git config --list
+    Lista as configurações do git
+
+    - Existem basicamente 3 níveis de configurações do Git  
+        - Sistema
+            • git config --system --edit
+        - Usuário
+            • git config --global --edit
+        - Projeto
+            • git config --edit
+
+        ** PARA LISTAR AS CONFIGS USE --list ao invés de --edit **
+
+
+• git config --global core.editor code
+    Habilita edição do arquivo no vscode ao invés do padrão que é o vim 
+    
+    Depois rode: • git config --global --edit
+        Ele irá abrir o arquivo no vscode
+
+
+• 
