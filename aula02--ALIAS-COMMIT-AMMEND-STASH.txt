@@ -18,4 +18,21 @@
                 • git c "texto do commit"
 
 
-• 
+• git commit --amend --no-edit  
+    Caso vc queria adicionar mais alterações no ultimo commit sem mudar a mensagem do ultimo commit
+
+
+• git stash
+    Guarda as alterações não commitadas na memória stash, para podermos obte-las depois    
+
+• git stash list
+    Lista todos os stash
+
+• git stash apply id
+    Adiciona as alterações em stash passando o id *** O APPLY ADICIONA O STASH MAS MANTEM O STASH
+
+• git stash pop id
+    Adiciona as alterações em stash passando o id *** O POP ADICIONA O STASH E REMOVE DA LISTA
+
+• git stash clear
+    Apaga todos os stash
