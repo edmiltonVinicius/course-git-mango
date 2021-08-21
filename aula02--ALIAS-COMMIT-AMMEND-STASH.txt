@@ -1,0 +1,21 @@
+- Untrucked File
+    Arquivos Novos que o git não conhece
+
+
+• git restore --staged nome-do-arquivo  
+    Retorna o arquivo para a sessão unstaged area (o arquivo não será enviado no próximo commit)
+
+
+• No arquivo de configuração, seja do sistema, usuário ou projeto, podemos criar alias atalhos
+    [alias]
+        atalho = !comando-do-atalho  (a ! é necessário para que o comando seja executado)
+        • ex: s = !git status
+            Depois no terminal rode git atalho  
+                • git s
+
+        • ex 2: c = !git add . && git commit -m
+             Depois no terminal rode git atalho  
+                • git c "texto do commit"
+
+
+• 
