@@ -29,6 +29,3 @@ link: https://www.youtube.com/playlist?list=PL9aKtVrF05DzbNiE7jcm7s6z6Lg-u72Rq
     
     Depois rode: • git config --global --edit
         Ele irá abrir o arquivo no vscode
-
-
-• 

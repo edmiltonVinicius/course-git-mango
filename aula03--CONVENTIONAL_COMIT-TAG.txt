@@ -1,0 +1,66 @@
+Conventional Commit:
+    - Doc: https://www.conventionalcommits.org/en/v1.0.0/
+    - Pacote NPM: git-commit-msg-linter
+        Para trabalhar com linter de commit no Node, muito simples e usar e padroniza os commit's.
+
+Git Log:
+    git log --oneline
+    git log --pretty=oneline
+
+    Formatar commit:
+        git log --pretty=format:aqui-vai-as-instrucoes-do-commit-personalizado
+
+            Ex: git log --pretty=format:'%h %d %s - %cn - %cr'
+            
+            %h = Hash minificado do Commit, para o hash completo mude para %H 
+            %d = Branch
+            %s = Menssagem do Commit
+            %cn = Nome do author do Commit
+            %cr = Data do Commit
+
+            * Podemos colocar cor para ajudar na leitura, abaixo o mesmo log formatado porem com COR:
+                git log --pretty=format:'%C(blue)%h %C(red)%d %C(white)%s - %C(cyan)%cn - %C(green)%cr'
+
+            %C(nome-da-cor-ingles)
+        
+        **** CRIE SEMPRE UM ALAIS PARA SER MAIS PRÁTICO ****
+
+Tag:
+    - Criar tag:
+        git tag marcador-da-tag
+
+    - Listar as Tags:
+        git tag
+    
+    - Remover Tag:
+        git tag -d marcador-da-tag
+
+    - TAG ANOTADA OQUE DEVE IR PARA O REPOSITÓRIO:
+        git tag marcador-da-tag -m "mensagem-da-tag"
+
+        Ex: git tag 1.0 -m "First verison Project"
+
+    - Criar Tag em Commit anterior:
+        git tag -a marcador-da-tag -m "mensagem-da-tag" id-do-commit
+
+        Ex: git tag -a "2.0.0" -m "New Complete verison project" 7c41190
+
+    - Por padrão ao enviar um push para o repositório remoto as Tags não são enviadas, devemos passar flags no push:
+        - Envia todas as Tags:
+            git push origin master --Tags   
+
+        - Envia apenas as Tags anotadas (com mensagens): (RECOMENDADO)
+            git push origin master --follow-tags
+
+        - PODEMOS COLOCAR NO ARQUIVO DO GIT PARA SEMPRE ENVIAR AS TAGS (--FOLLOW-TAGS)
+            Abra o arquivo de config do git
+            Adicione:
+                [push]
+                    followTags = true
+
+            Com isso sempre que fizer um push irá enviar as Tags automaticamente
+
+    - Remover Tag no Repositório remoto:
+        git push --delete remote "marcador-da-tag"
+
+        Ex: git push --delete origin "2.0.0"
